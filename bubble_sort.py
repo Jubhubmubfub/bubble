@@ -11,25 +11,12 @@ need to check if items are already sorted at the end
 
 import random
 random_list = []
-for i in range(0,10):
+for i in range(0,25):
     random_list.append(random.randrange(0,10000))
-print "Array is: \n",random_list,"\n"
-''' 8,7,6,5,4,9,10,1
-#0 1 2 3 4 5 6  7
-[2,1] #lenght is 2 indexes 0,1
-
- 3,1,2 -> 1,3,2 -> 1,2,3
-#0 1 2    0 1 2    0 1 2
- 3,2,1 -> 2,3,1 -> 2,1,3 -> 1,2,3
-#0 1 2    0 1 2    0 1 2    0 1 2
-[4,3,5,6,7]
-
- 1,2,3,4,5
-#0 1 2 3 4'''
 def bubble(arr):
     temp = 0
     count = 1
-    lastIndex = len(arr)
+    lastIndex = (len(arr)-1)
     while count > 0:
         print "while loop is running, count is ",count,"lastIndex is ",lastIndex,"\n"
         count = 0
@@ -48,5 +35,6 @@ def bubble(arr):
                 count += 1
                 print "count is ",count
                 print arr,"\n"
+    return "sorted arr is ",arr
 
 print bubble(random_list)
